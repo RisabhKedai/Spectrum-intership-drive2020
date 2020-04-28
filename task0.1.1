@@ -1,15 +1,21 @@
 #defining the prod_or_sum() which takes in the two integers 
 def prod_or_sum(x,y):
 #if the result of the product is greaterthan 1000 
-	if x*y>1000:
-		#return the sum
-		return x+y
-	else:
-		#if not return the product only
-		return x*y
+    if x*y>1000:
+	#return the sum
+        if int(x+y)<x+y:
+            return x+y
+        else:
+            return int(x+y)
+    else:
+	#if not return the product only
+        if int(x*y)<x*y:
+            return x*y
+        else:
+            return int(x*y)
 
 #taking user input
-a,b=map(int,input().split())
+a,b=map(float,input().split())
 #calling the defined function with the user input in the parameters
 #and storing answer
 ans=prod_or_sum(a,b)
