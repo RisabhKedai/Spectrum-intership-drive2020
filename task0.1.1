@@ -15,8 +15,9 @@ def prod_or_sum(x,y):
             return int(x*y)
 
 #taking user input
-a,b=map(float,input().split())
+a,b=map(float,input("enter two numbers seperated by <space>").split())
 #calling the defined function with the user input in the parameters
 #and storing answer
 ans=prod_or_sum(a,b)
+print("the result is:-")
 print(ans)
